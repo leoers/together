@@ -1,0 +1,128 @@
+$flex: flex;
+$height: 100%;
+$white: #ffffff;
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+html, body{
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-style: bold;
+}
+
+body{
+  background-image: linear-gradient(150deg, #836FFF, #483D8B);
+  background-repeat: no-repeat;
+  background-size: cover;
+  #root{
+    height: $height;
+    .acess, .cadastre{
+      display: $flex;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      height: $height;
+      form{
+        .logo{
+          position: relative;
+          margin: 0 0 15px 0;
+          h1{
+            text-align: center;
+            color: $white;
+            padding: 10px 0;
+            text-indent: -99999;
+            position: absolute;
+            display: none;
+          }
+          img{
+            max-width: 50%;
+            display: block;
+            margin: 0 auto;
+          }
+        }
+        .cadastre-title{
+          h1{
+            color: $white;
+          }
+        }
+        .adress{
+          display: $flex;
+          input{
+            width: 39%;
+            margin: 0 0 0 1%;
+          }
+        }
+        div{
+          margin: 7px 0;
+          select{
+            width: 100%!important;
+            height: 35px;
+          }
+          input, select{
+            padding: 5%;
+            width: 90%;
+            border-radius: 50px;
+            border: 1px solid $white;
+            background: rgba(0, 0, 0, 0);
+            color: $white;
+            &:focus{
+              outline: none;
+            }
+            &::-webkit-input-placeholder {
+              color: $white;
+              padding: 0 20px;
+            }
+            
+            &::-moz-placeholder {
+              color: $white;
+              padding: 0 20px;
+            }
+            
+            &:-ms-input-placeholder {  
+              color: $white; 
+              padding: 0 20px;
+            }
+            &::placeholder{
+              color: $white; 
+              padding: 0 20px;
+            }
+            
+          }
+          label{
+            font-size: 11px;
+            color: $white;
+            padding: 6px 0;
+            display: block;
+          }
+          button{
+            background-color: #32CD36;
+            width: 100%;
+            border-radius: 50px;
+            padding: 13px 20px;
+            color: $white;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 25px 0;
+            transition: background-color 0.5s;
+            &:hover{
+              background-color: #006400;
+            }
+          }
+          
+          p{
+            font-size: 11px;
+            color: $white;
+            cursor: pointer;
+            text-decoration: underline;
+            margin: 6px 10px;
+          }
+          
+        }
+      }
+    }
+  }
+}
